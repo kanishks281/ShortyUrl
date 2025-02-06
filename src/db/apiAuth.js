@@ -37,7 +37,7 @@ export async function signup({name, email, password, profile_pic}) {
 }
 
 export async function getCurrentUser() {
-  const {data: session, error} = await supabase.auth.getSession();
+  const {data: session, error} = await supabase.auth.getSession();//getting user data from local storage
   if (!session.session) return null;
 
   // const {data, error} = await supabase.auth.getUser();
